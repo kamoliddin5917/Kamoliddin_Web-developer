@@ -58,6 +58,7 @@ body {
   border: none;
   border-top-left-radius: 20px;
   cursor: pointer;
+  outline: none;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -98,7 +99,7 @@ body {
   overflow: hidden;
   background-color: red;
   padding: 10px 0 10px 10px;
-  transform: translate(-90%, -80%) rotate(70deg);
+  transform: translate(-75%, -96%) rotate(90deg);
   transition: transform 1s;
 }
 .secondary-transform {
