@@ -63,6 +63,22 @@ body {
   bottom: 0;
   right: 0;
 }
+.btn::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background-color: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.btn:hover::after {
+  -webkit-animation: btn 0.7s infinite;
+          animation: btn 0.7s infinite;
+}
 .btn--arrow {
   transition: transform 1s;
 }
@@ -139,10 +155,32 @@ body {
   color: #fd940b;
   text-shadow: -1px 0.5px #000;
   transition: all 0.4s;
+  position: relative;
 }
 .box__link:hover {
   background-color: gold;
   color: red;
+}
+.box__link:active {
+  background-color: green;
+  transform: scale(0.5);
+  transition: transform 0.1s;
+}
+.box__link::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background-color: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.box__link:hover::after {
+  -webkit-animation: btn 0.7s infinite;
+          animation: btn 0.7s infinite;
 }
 
 .img {
@@ -168,4 +206,26 @@ body {
 }
 .img__icon:hover {
   color: #fff;
+}
+
+@-webkit-keyframes btn {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes btn {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
 }/*# sourceMappingURL=main.css.map */
